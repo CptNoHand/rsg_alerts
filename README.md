@@ -22,27 +22,29 @@
 - email : rexshackuk@gmail.com
 
 # Client Use:
-----------------------------------------------------
+```lua
 local alertcoords = GetEntityCoords(PlayerPedId())
 local blipname = 'contraband'
 local alertmsg = 'contraband sale in progress'
 TriggerEvent('rsg_alerts:client:lawmanalert', alertcoords, blipname, alertmsg)
-----------------------------------------------------
+```
+```lua
 local alertcoords = GetEntityCoords(PlayerPedId())
 local blipname = 'Help!'
 local alertmsg = 'need help!'
 TriggerEvent('rsg_alerts:client:medicalert', alertcoords, blipname, alertmsg)
-----------------------------------------------------
+```
 
 # Server Use:
-----------------------------------------------------
+```lua
 local alertcoords = GetEntityCoords(PlayerPedId())
 local blipname = 'contraband'
 local alertmsg = 'contraband sale in progress'
 TriggerClientEvent('rsg_alerts:client:lawmanalert', alertcoords, blipname, alertmsg)
-----------------------------------------------------
+```
+```lua
 local alertcoords = GetEntityCoords(PlayerPedId())
 local blipname = 'Help!'
 local alertmsg = 'need help'
 TriggerClientEvent('rsg_alerts:client:medicalert', alertcoords, blipname, alertmsg)
-----------------------------------------------------
+```
